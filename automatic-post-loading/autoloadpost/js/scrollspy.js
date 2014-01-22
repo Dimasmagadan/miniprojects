@@ -78,6 +78,7 @@
 			var lastTick = element.data('scrollSpy:ticks');
 			if (typeof lastTick == 'number' && lastTick !== ticks) {
 				// exited from view
+				console.log ('last tick = ' + lastTick + ' ticks = ' + ticks);
 				element.triggerHandler('scrollSpy:exit');
 				element.data('scrollSpy:ticks', null);
 			}
