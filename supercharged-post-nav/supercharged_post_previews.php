@@ -3,10 +3,10 @@
  * Plugin Name: Supercharged Post Navigation
  * Plugin URI: http://premium.wpmudev.org/blog
  * Description: Provides a much enhanced post navigation via supercharged_post_navigation function
- * Version: The Plugin's Version Number, e.g.: 1.0
+ * Version: 1.0
  * Author: Chris Knowles
- * Author URI: http://premium.wpmudev.org/blog
- * License: A "Slug" license name e.g. GPL2
+ * Author URI: http://premium.wpmudev.org/blog/author/chrisdknowles
+ * License: GPL2
  */
 
 function supercharged_post_navigation( $title_text='> next post' , $image_size='post_thumbnail' ) {
