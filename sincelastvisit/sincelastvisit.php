@@ -51,3 +51,22 @@ function sincelastvisit_set_cookie() {
 }
  
 add_action( 'init', 'sincelastvisit_set_cookie' );
+
+
+function sincelastvisit_comment_class($classes){
+
+	if ( isset($_COOKIE['lastvisit']) && $_COOKIE['lastvisit'] != '' ) {
+
+		$lastvisit = $_COOKIE['lastvisit'];
+
+		// get the publish date of the post in UNIX GMT
+		$publish_date = get_comment_time( 'U', true );
+		
+		// if published since last visit then add the "new" tag
+		if ($publish_date > $lastvisit) $classes[]='nslv';
+
+	}
+
+	return $classes;
+}
+add_filter( 'comment_class', 'sincelastvisit_comment_class' );
